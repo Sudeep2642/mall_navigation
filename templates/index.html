@@ -29,48 +29,6 @@
 
 </div>
 
-<!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-
-<script>
-let currentLocation = "";
-
-let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-
-scanner.addListener('scan', function (content) {
-    currentLocation = content;
-    document.getElementById("scan-result").innerText = "Scanned Location: " + content;
-});
-
-Instascan.Camera.getCameras().then(function (cameras) {
-    if (cameras.length > 0) {
-        scanner.start(cameras[0]);
-    }
-});
-
-function findPath() {
-    let destination = document.getElementById("destination").value;
-
-    fetch("/navigate", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            start: currentLocation,
-            end: destination
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.path) {
-            document.getElementById("route").innerText = data.path.join(" ➜ ");
-        } else {
-            document.getElementById("route").innerText = "Error: " + data.error;
-        }
-    });
-}
-</script> -->
-
 <script>
 let currentLocation = "";
 
